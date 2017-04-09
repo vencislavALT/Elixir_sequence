@@ -1,7 +1,19 @@
 # Sequence
 
-**TODO: Add description**
-
+Simple Sequence Server that preserves state after crash.
+The architecture is as follows.
+Main Supervisor
+     |
+     |
+     |
+     /\
+    /  \
+ Stash SubSupervisor
+ Worker	   |
+	   |
+	Sequence
+	 Worker
+	 
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
