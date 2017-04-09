@@ -2,17 +2,8 @@
 
 Simple Sequence Server that preserves state after crash.
 The architecture is as follows.
-Main Supervisor
-     |
-     |
-     |
-     /\
-    /  \
- Stash SubSupervisor
- Worker	   |
-	   |
-	Sequence
-	 Worker
+MAIN SUPERVISOR -> Stash Worker
+     		-> SubSupervisor -> Sequence Worker
 	 
 ## Installation
 
